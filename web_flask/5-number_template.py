@@ -43,8 +43,17 @@ def pyhton_route(text="is cool"):
     return f"Python {escape(text.replace('_',' '))}"
 
 
-@app.route('/number/<int:n>', strict_slashes=False)
-def is_number_route(n):
+@app.route('/number_template/<n>', strict_slashes=False)
+def number_template_route(n):
+    """
+     display a HTML page only if n is an integer
+    if n is  number
+    """
+    return f"{escape(n)} is a number"
+
+
+@app.route('/number_template/<n>', strict_slashes=False)
+def number_template_route(n):
     """
     returns n is a number
     if n is  number
