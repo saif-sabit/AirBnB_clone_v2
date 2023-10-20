@@ -52,5 +52,14 @@ def is_number_route(n):
     return f"{escape(n)} is a number"
 
 
+@app.route('/number/<int:n>', strict_slashes=False)
+def number_route(n):
+    """
+     display a HTML page only if n is an integer
+    if n is  number
+    """
+    return f"{escape(n)} is a number"
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
