@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-start Flask application
+Start Flask application
+web application specifications:
+    Listening on 0.0.0.0, port 5000
     Routes:
         /: display 'Hello HBNB!'
         /hbnb: display 'HBNB'
