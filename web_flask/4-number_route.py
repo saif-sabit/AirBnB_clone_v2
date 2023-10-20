@@ -49,7 +49,7 @@ def is_number_route(n):
     returns n is a number
     if n is  number
     """
-    return f"{escape(text.replace('_',' '))} is number"
+    return f"{escape(n)} is number"
 
 
 if __name__ == '__main__':
