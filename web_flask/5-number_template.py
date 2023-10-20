@@ -66,7 +66,7 @@ def number_template(n):
     """
     sends value to html
     """
-    return render_template('5-number.html', n=n)
+    return render_template('5-number.html', n=escape(n))
 
 
 if __name__ == '__main__':
