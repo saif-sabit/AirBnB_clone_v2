@@ -75,10 +75,10 @@ def number_odd_or_even_template(n):
     sends value to html
     """
     v = ""
-    if n%2 == 0:
+    if n % 2 == 0:
         v = "even"
     else:
-        v= "odd"
+        v = "odd"
     return render_template('6-number_odd_or_even.html', n=escape(n), value=v)
 
 
