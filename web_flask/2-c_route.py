@@ -34,7 +34,7 @@ if __name__ == '__main__':
 @app.route('/c/<text>', strict_slashes=False)
 def c_route(text):
     """ returns c text"""
-    return f"C {escape(text.replace('_',' '))}"
+    return "C "+ escape(text.replace('_',' '))
 
 
 if __name__ == '__main__':
