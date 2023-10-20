@@ -12,7 +12,7 @@ web application specifications:
         /number/<n>: display “n is a number” only if n is an integer
 """
 
-from flask import Flask, escape, render_template
+from flask import Flask, escape
 app = Flask(__name__)
 
 
@@ -59,16 +59,6 @@ def number_template_route(n):
     if n is  number
     """
     return f"{escape(n)} is a number"
-
-
-@app.route('/number_template/<int:n>', strict_slashes=False)
-def number_template_route(n):
-    """
-    returns n is a number
-    if n is  number
-    """
-    return render_template('5-numbers.html', n=n)
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
