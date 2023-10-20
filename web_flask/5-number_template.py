@@ -49,7 +49,7 @@ def is_number_route(n):
     returns n is a number
     if n is  number
     """
-    return render_template('5-numbers.html',n)
+    return render_template('5-numbers.html', n=n)
 
 
 if __name__ == '__main__':
