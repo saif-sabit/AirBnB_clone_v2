@@ -62,7 +62,7 @@ def number_template_route(n):
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def is_number_route(n):
+def number_template_route(n):
     """
     returns n is a number
     if n is  number
