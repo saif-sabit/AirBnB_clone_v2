@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
 start Flask application
+    Routes:
+        /: display 'Hello HBNB!'
+        /hbnb: display 'HBNB'
 """
 
 from flask import Flask
