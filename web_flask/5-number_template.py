@@ -61,7 +61,7 @@ def number_template_route(n):
     return f"{escape(n)} is a number"
 
 
-@app.route('/number_template/<n>', strict_slashes=False)
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template_route(n):
     """
     returns n is a number
