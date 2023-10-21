@@ -9,13 +9,12 @@ app = Flask(__name__)
 
 
 @app.route('/hbnb_filters', strict_slashes=False)
-@app.route('/hbnb_filters/<id>', strict_slashes=False)
-def hbnb_filters(id=None):
+def hbnb_filters():
     """returns states list"""
-    if id is not None:
-        id=id
-    states = storage.all("State")
-    return render_template('10-hbnb_filters.html', states=states, id=id)
+    states = storage.all("State").values()
+    amenities = storage.all("Amenity").values()
+    return render_template('10-hbnb_filters.html',
+                           states=states, amenities=amenities)
 
 
 @app.teardown_appcontext
